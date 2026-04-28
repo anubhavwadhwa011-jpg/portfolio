@@ -1,0 +1,162 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background: #0d0d0d; color: #e0e0e0; }
+
+/* Header */
+.header {
+  background: #111; display: flex; align-items: center;
+  justify-content: space-between; padding: 0 2.5rem; height: 60px;
+}
+.logo-ad svg { display: block; }
+.header-nav { display: flex; align-items: center; gap: 1.8rem; }
+.header-nav a { color: #ccc; text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+.header-nav a:hover { color: #fff; }
+.social-icons { display: flex; gap: 1rem; margin-left: 1rem; border-left: 1px solid #333; padding-left: 1.5rem; }
+.social-icons a { color: #ccc; font-size: 0.85rem; transition: color 0.2s; }
+.social-icons a:hover { color: #fff; }
+
+/* Hero */
+.hero { display: flex; height: calc(100vh - 60px); overflow: hidden; }
+
+.hero-half {
+  flex: 1; position: relative; display: flex;
+  align-items: flex-end; padding: 3rem;
+  overflow: hidden;
+}
+
+/* Designer side */
+.designer { background: #111827; }
+
+.brushstroke-bg {
+  position: absolute; inset: 0; overflow: hidden;
+}
+
+.brush {
+  position: absolute; border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+  opacity: 0.75; filter: blur(2px);
+}
+.b1 { width: 55%; height: 70%; top: 5%; left: 10%; background: #2ab5b5; transform: rotate(-15deg); }
+.b2 { width: 40%; height: 50%; top: 20%; left: 30%; background: #f5c518; transform: rotate(10deg); opacity: 0.6; }
+.b3 { width: 35%; height: 45%; top: 10%; left: 45%; background: #e84040; transform: rotate(-5deg); opacity: 0.65; }
+.b4 { width: 30%; height: 40%; top: 30%; left: 20%; background: #f07d2a; transform: rotate(20deg); opacity: 0.55; }
+
+.designer-face {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, transparent 30%, rgba(17,24,39,0.6) 100%);
+}
+
+/* Coder side */
+.coder { background: #1a1a2e; }
+
+.code-bg {
+  position: absolute; inset: 0; display: flex;
+  flex-wrap: wrap; align-content: flex-start;
+  gap: 1.2rem; padding: 2rem; opacity: 0.12;
+}
+.code-bg span {
+  color: #7effa0; font-family: 'Courier New', monospace;
+  font-size: clamp(0.8rem, 1.5vw, 1.1rem); font-weight: 600;
+}
+
+.face-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(26,26,46,0.5) 100%);
+}
+
+/* Hero text */
+.hero-text { position: relative; z-index: 2; }
+
+.designer .hero-text h1 {
+  font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 900;
+  color: #f0f0f0; line-height: 1; margin-bottom: 1rem;
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.4);
+}
+.designer .hero-text p { color: #aaa; font-size: 1rem; max-width: 280px; line-height: 1.6; }
+
+.coder .hero-text h1 {
+  font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 900;
+  color: #fff; line-height: 1; margin-bottom: 1rem;
+}
+.coder .hero-text p { color: #aaa; font-size: 1rem; max-width: 280px; line-height: 1.6; }
+
+/* Divider line */
+.hero::after {
+  content: ''; position: absolute; left: 50%; top: 60px;
+  width: 2px; height: calc(100vh - 60px);
+  background: linear-gradient(to bottom, #111 0%, transparent 100%);
+  z-index: 10;
+}
+.hero { position: relative; }
+
+/* Work Section */
+.work { padding: 4rem 2.5rem; background: #0d0d0d; }
+.work h2 { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.15em; color: #555; margin-bottom: 2rem; }
+
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+
+.card { display: flex; flex-direction: column; gap: 0.75rem; }
+.card-label { font-size: 0.95rem; font-weight: 600; color: #e0e0e0; }
+
+.card-preview {
+  border-radius: 12px; overflow: hidden;
+  border: 1px solid #2a2a2a; background: #1a1a1a;
+  padding: 1.2rem; min-height: 200px;
+}
+
+/* NRL Card */
+.nrl-card { background: #1a1a1a; }
+.nrl-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+.nrl-badge { font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 4px; color: #fff; }
+.nrl-badge.green { background: #16a34a; }
+.nrl-time { font-size: 0.75rem; color: #666; }
+.nrl-teams { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+.team { display: flex; flex-direction: column; align-items: center; gap: 0.4rem; font-size: 0.75rem; color: #aaa; }
+.team-logo { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.7rem; color: #fff; }
+.green-logo { background: #16a34a; }
+.red-logo { background: #dc2626; }
+.vs { font-weight: 700; font-size: 0.85rem; color: #555; }
+.nrl-odds { display: flex; justify-content: space-between; }
+.nrl-odds span { background: #2a2a2a; border-radius: 6px; padding: 0.3rem 0.6rem; font-size: 0.8rem; font-weight: 600; color: #e0e0e0; }
+
+/* Interior Card */
+.interior-card { padding: 0; }
+.interior-img { height: 110px; background: linear-gradient(135deg, #c9a96e, #8b6914); }
+.interior-body { padding: 1rem; }
+.interior-source { font-size: 0.7rem; color: #22c55e; font-weight: 600; margin-bottom: 0.3rem; }
+.interior-title { font-size: 0.85rem; font-weight: 700; color: #e0e0e0; margin-bottom: 0.3rem; line-height: 1.4; }
+.interior-text { font-size: 0.75rem; color: #666; line-height: 1.5; margin-bottom: 0.75rem; }
+.interior-actions { display: flex; gap: 1rem; font-size: 0.75rem; color: #555; }
+.interior-actions i { margin-right: 0.3rem; }
+
+/* Qantas Card */
+.qantas-card { background: #111827; position: relative; padding: 0.5rem; }
+.aus-map { position: relative; }
+.map-popup {
+  position: absolute; top: 20%; left: 50%;
+  transform: translateX(-50%);
+  background: #cc0000; color: #fff; border-radius: 8px;
+  padding: 0.4rem 0.8rem; text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.map-popup::after {
+  content: ''; position: absolute; bottom: -6px; left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent; border-top-color: #cc0000; border-bottom: none;
+}
+.pts { font-size: 0.75rem; font-weight: 700; }
+.city { font-size: 0.65rem; opacity: 0.85; }
+
+/* Footer */
+.footer { background: #0a0a0a; color: #555; text-align: center; padding: 2rem; border-top: 1px solid #1f1f1f; }
+.footer p { font-size: 0.8rem; margin-bottom: 1rem; }
+.footer-nav { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+.footer-nav a { color: #444; text-decoration: none; font-size: 0.8rem; transition: color 0.2s; }
+.footer-nav a:hover { color: #fff; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero { flex-direction: column; height: auto; }
+  .hero-half { min-height: 50vh; }
+  .hero::after { display: none; }
+  .cards { grid-template-columns: 1fr; }
+  .header-nav { gap: 1rem; }
+}
