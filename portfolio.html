@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anubhav | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="bg-layer"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Anubhav</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <img src="photo.jpg.jpeg" class="hero-photo" alt="Anubhav" onerror="this.style.display='none'" />
+    <div class="hero-center">
+      <p class="greeting">Hi, I'm</p>
+      <h1>Anubhav</h1>
+      <h2 class="subtitle">Full Stack Developer</h2>
+      <p class="hero-desc">I build clean, fast, and user-friendly web experiences.</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn primary">View My Work</a>
+        <a href="#contact" class="btn outline">Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <h2 class="section-title">About <span>Me</span></h2>
+    <div class="about-content">
+      <p>Hey! I'm Anubhav, a passionate developer who loves turning ideas into reality through code. I enjoy working on both frontend and backend, and I'm always looking to learn new technologies.</p>
+      <p>When I'm not coding, you'll find me exploring new tech, reading, or playing games. I'm currently open to new opportunities — feel free to reach out!</p>
+      <a href="#" class="btn primary">Download CV</a>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section alt" id="skills">
+    <h2 class="section-title">My <span>Skills</span></h2>
+    <div class="skills-grid">
+      <div class="skill-card"><i class="fab fa-html5"></i><p>HTML5</p></div>
+      <div class="skill-card"><i class="fab fa-css3-alt"></i><p>CSS3</p></div>
+      <div class="skill-card"><i class="fab fa-js"></i><p>JavaScript</p></div>
+      <div class="skill-card"><i class="fab fa-react"></i><p>React</p></div>
+      <div class="skill-card"><i class="fab fa-node-js"></i><p>Node.js</p></div>
+      <div class="skill-card"><i class="fas fa-database"></i><p>MongoDB</p></div>
+      <div class="skill-card"><i class="fab fa-python"></i><p>Python</p></div>
+      <div class="skill-card"><i class="fab fa-git-alt"></i><p>Git</p></div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section" id="projects">
+    <h2 class="section-title">My <span>Projects</span></h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-icon">📦</div>
+        <h3>Project One</h3>
+        <p>A short description of what this project does and the technologies used.</p>
+        <div class="project-tags"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
+        <div class="project-links">
+          <a href="#"><i class="fab fa-github"></i> Code</a>
+          <a href="#"><i class="fas fa-external-link-alt"></i> Live</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">🛒</div>
+        <h3>Project Two</h3>
+        <p>A short description of what this project does and the technologies used.</p>
+        <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        <div class="project-links">
+          <a href="#"><i class="fab fa-github"></i> Code</a>
+          <a href="#"><i class="fas fa-external-link-alt"></i> Live</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">🤖</div>
+        <h3>Project Three</h3>
+        <p>A short description of what this project does and the technologies used.</p>
+        <div class="project-tags"><span>Python</span><span>Flask</span><span>API</span></div>
+        <div class="project-links">
+          <a href="#"><i class="fab fa-github"></i> Code</a>
+          <a href="#"><i class="fas fa-external-link-alt"></i> Live</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section alt" id="contact">
+    <h2 class="section-title">Contact <span>Me</span></h2>
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <p><i class="fas fa-envelope"></i> gw270704@gmail.com</p>
+        <p><i class="fas fa-phone"></i> +91 7078849549</p>
+        <p><i class="fas fa-graduation-cap"></i> B.Tech, GL Bajaj Institute</p>
+        <p><i class="fas fa-map-marker-alt"></i> 2nd Year | CGPA: 7.0</p>
+        <div class="socials">
+          <a href="https://github.com/anubhavwadhwa011-jpg" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/anubhav-wadhwa-898a00285" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/annubhavvv_2704" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Designed & Built by <span>Anubhav</span> &copy; 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
